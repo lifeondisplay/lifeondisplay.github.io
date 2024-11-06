@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<head>
+        	<meta charset="UTF-8">
+        	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>
+        	<title>
 			its all in our hands
-        </title>
+        	</title>
 
-        <link rel="icon" href="https://lifeondisplay.github.io/favicon.ico" type="image/x-icon">
+        	<link rel="icon" href="https://lifeondisplay.github.io/favicon.ico" type="image/x-icon">
 		<link rel="shortcut icon" href="https://lifeondisplay.github.io/favicon.png">
 
 		<style>
@@ -17,28 +17,60 @@
 				display: none;
 			}
 		</style>
-    </head>
 
-    <body>
-        <p style="user-select: none;">
-			lifeondisplay is a band and we make music
-        </p>
+		<script>
+			document.onkeydown = function(e) {
+				if (e.ctrlKey && (e.keyCode === 67 || e.keyCode === 86 || e.keyCode === 85 || e.keyCode === 117)) {
+					alert('why see from the outside?');
+					
+					return false;
+				} else {
+					return true;
+				}
+			};
 
-        <img src="lifeondisplayhome.gif" style="width: 100%; height: 400px; user-select: none; pointer-events: none;">
+			$(document).keypress("u", function(e) {
+				if (e.ctrlKey) {
+					return false;
+				} else {
+					return true;
+				}
+			});
 
-        <p style="user-select: none;">
+			$(document).keydown(function(e) {
+				if (e.keyCode == 123) { // f12
+					alert('why see from the outside?');
+
+					return false;
+				} else if (e.ctrlKey && e.shiftKey && e.keyCode == 73) { // ctrl + shift + i
+					alert('why see from the outside?');
+
+					return false;
+				}
+			});
+		</script>
+	</head>
+
+    	<body>
+	        <p style="user-select: none;">
+				lifeondisplay is a band and we make music
+	        </p>
+
+        	<img src="lifeondisplayhome.gif" style="width: 100%; height: 400px; user-select: none; pointer-events: none;">
+
+        	<p style="user-select: none;">
 			if u want to listen to lifeondisplay <a href="https://lifeondisplay.bandcamp.com/" target="_blank">click here</a>
 		</p>
 
-        <p style="user-select: none;">
+        	<p style="user-select: none;">
 			if u want to talk to lifeondisplay about something serious <a href="mailto:displayoflife@gmail.com" target="_blank">click here</a>
 		</p>
         
-        <p style="user-select: none;">
+        	<p style="user-select: none;">
 			if u want to keep up to date with pictures of lifeondisplay <a href="#" target="_blank">click here</a>
 		</p>
 
-        <p style="user-select: none;">
+        	<p style="user-select: none;">
 			if u want to keep up to date with videos of lifeondisplay <a href="#" target="_blank">click here</a>
 		</p>
 
@@ -137,5 +169,5 @@
     ==+++         +=+                   
   =++                                   
 		</pre>
-    </body>
+    	</body>
 </html>
