@@ -41,6 +41,42 @@
 				display: none;
 			}
 		</style>
+
+		<script src="../js/jq.js"></script>
+
+		<script>
+			document.onkeydown = function(e) {
+				if (e.ctrlKey && (e.keyCode === 67 || e.keyCode === 86 || e.keyCode === 85 || e.keyCode === 117)) {
+					alert('why look from the outside???!!!');
+
+					return false;
+				} else {
+					return true;
+				}
+			};
+
+			$(document).keypress("u", function(e) { // ctrl + u
+				if (e.ctrlKey) {
+					alert('why look from the outside???!!!');
+
+					return false;
+				} else {
+					return true;
+				}
+			});
+
+			$(document).keydown(function (e) {
+				if (e.keyCode == 123) { // f12
+					alert('why look from the outside???!!!');
+
+					return false;
+				} else if (e.ctrlKey && e.shiftKey && e.keyCode == 73) { // ctrl + shift + i
+					alert('why look from the outside???!!!');
+
+					return false;
+				}
+			});
+		</script>
     </head>
 
     <body style="user-select: none;">
